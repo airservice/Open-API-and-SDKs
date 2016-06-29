@@ -1,0 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '8.0'
+
+use_frameworks!
+
+target 'CocoapodsDemo' do
+	
+	pod 'AirServiceKit', :git => 'https://github.com/airservice/Open-API-and-SDKs.git'
+	
+end

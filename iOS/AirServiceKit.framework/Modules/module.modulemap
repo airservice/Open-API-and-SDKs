@@ -1,0 +1,6 @@
+framework module AirServiceKit {
+  umbrella header "AirServiceKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
