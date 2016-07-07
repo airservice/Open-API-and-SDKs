@@ -12,6 +12,7 @@
 @interface AppDelegate () <AirServiceKitDelegate>
 
 @property (nonatomic, strong) AirServiceKitViewController *viewController;
+
 - (void)registerForPushNotifications;
 
 @end
