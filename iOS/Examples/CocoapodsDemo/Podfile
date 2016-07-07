@@ -6,6 +6,5 @@ use_frameworks!
 
 target 'CocoapodsDemo' do
 	
-	pod 'AirServiceKit', :git => 'https://github.com/airservice/Open-API-and-SDKs.git'
-	
+	pod 'AirServiceKit', :git => 'https://github.com/airservice/Open-API-and-SDKs.git'	
 end

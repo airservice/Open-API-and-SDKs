@@ -1,6 +1,6 @@
 //
 //  AppDelegate.m
-//  CocoapodsDemo
+//  SupportingPayPalPayments
 //
 //  Copyright © 2016 AirService Digital. All rights reserved.
 //
@@ -8,11 +8,11 @@
 #import "AppDelegate.h"
 
 #import <AirServiceKit/AirServiceKit.h>
+#import <ASPayPalPayments/ASPayPalPayments.h>
 
 @interface AppDelegate () <AirServiceKitDelegate>
 
 @property (nonatomic, strong) AirServiceKitViewController *viewController;
-
 - (void)registerForPushNotifications;
 
 @end
@@ -24,6 +24,9 @@
     self.viewController = [[AirServiceKitViewController alloc] initWithClientID:@"22c7d3fc" clientSecret:@"aada245b93feb5d8e84dfeb49296da8b" collection:@"airservice-qa-sdk" delegate:self];
     self.viewController.appName = @"AirServiceKit Basic Demo";
     self.viewController.appEnvironment = ASAppEnvironmentQA; //QA Environment. Remove for production
+    
+    self.viewController.acceptPayPalPayments = YES;
+    self.viewController.payPalPaymentsClient = [[ASPayPalPayments alloc] init];
     
     NSDictionary* localNotification = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
     if (localNotification)
@@ -76,6 +79,20 @@
     {
         [self.viewController notificationReceived:notification.userInfo handler:nil local:YES];
     }
+}
+
+#pragma mark - URL scheme handling
+
+//iOS 8
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    return [self.viewController handleOpenURL:url sourceApplication:sourceApplication];
+}
+
+//iOS 9
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options
+{
+    return [self.viewController handleOpenURL:url sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]];
 }
 
 #pragma mark - AirServiceKitDelegate Methods
