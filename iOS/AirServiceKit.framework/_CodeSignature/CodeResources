@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/AirServiceKitViewController.h</key>
 		<data>
-		etUvu+CLYFbkuGetaWskz0DScws=
+		0fuL/Exh3mzmrm3WrNDClI9wP6A=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -23,10 +23,6 @@
 		<key>Modules/module.modulemap</key>
 		<data>
 		hcj8CCG7B0D8bVDjhYW9SwOrkDE=
-		</data>
-		<key>PrivateHeaders/ASPayPalPaymentConnector.h</key>
-		<data>
-		xPtXlK35a0dgnQqjZrfM6oC0APk=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -57,11 +53,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			etUvu+CLYFbkuGetaWskz0DScws=
+			0fuL/Exh3mzmrm3WrNDClI9wP6A=
 			</data>
 			<key>hash2</key>
 			<data>
-			ueKVsMYk6RHW9mYsZI1A2Ok0spu4OkgYkVXCU99Y1pk=
+			GCraEPNrImuOMbKSH8DqWUzb6Z70pS7M6J9ERrHU7ho=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -73,17 +69,6 @@
 			<key>hash2</key>
 			<data>
 			xJ6Km/oPPIMz5Z/UtderUZh9ztrqH3yRuHNEJxeRdsI=
-			</data>
-		</dict>
-		<key>PrivateHeaders/ASPayPalPaymentConnector.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			xPtXlK35a0dgnQqjZrfM6oC0APk=
-			</data>
-			<key>hash2</key>
-			<data>
-			wfYDTyIWFrEkry9GVtoVhlekdKSDE6DlGP7c62h6e6w=
 			</data>
 		</dict>
 	</dict>

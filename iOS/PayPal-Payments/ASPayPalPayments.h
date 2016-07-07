@@ -1,5 +1,5 @@
 //
-//  ASPayPalPayment.h
+//  ASPayPalPayments.h
 //  AirServiceKit
 //
 //  Copyright © 2016 AirService Digital. All rights reserved.
@@ -9,9 +9,9 @@
 
 #import <UIKit/UIKit.h>
 
-#import "ASPayPalPaymentConnector.h"
+#import "ASPayPalPaymentsConnector.h"
 
-@interface ASPayPalPayment : NSObject <ASPayPalPaymentConnector>
+@interface ASPayPalPayments : NSObject <ASPayPalPaymentsConnector>
 
 @property (nonatomic, strong) NSString *clientToken;
 @property (nonatomic, strong) UIViewController *hostViewController;

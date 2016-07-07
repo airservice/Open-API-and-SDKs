@@ -1,11 +1,11 @@
 //
-//  ASPayPalPaymentConnector.h
+//  ASPayPalPaymentConnectors.h
 //  AirServiceKit
 //
 //  Copyright © 2016 AirService Digital. All rights reserved.
 //
 
-@protocol ASPayPalPaymentConnector <NSObject>
+@protocol ASPayPalPaymentsConnector <NSObject>
 
 @required @property (nonatomic, strong) NSString *clientToken;
 @required @property (nonatomic, strong) UIViewController *hostViewController;

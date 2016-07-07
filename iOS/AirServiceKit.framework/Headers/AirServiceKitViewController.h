@@ -14,7 +14,7 @@ typedef NS_ENUM(NSInteger, ASAppEnvironment)
 };
 
 @protocol AirServiceKitDelegate;
-@protocol ASPayPalPaymentConnector;
+@protocol ASPayPalPaymentsConnector;
 
 @interface AirServiceKitViewController : UIViewController
 
@@ -27,7 +27,7 @@ typedef NS_ENUM(NSInteger, ASAppEnvironment)
 
 @property (nonatomic, assign) ASAppEnvironment appEnvironment;
 @property (nonatomic, assign) BOOL acceptPayPalPayments;
-@property (nonatomic, strong) id<ASPayPalPaymentConnector> payPalPaymentClient;
+@property (nonatomic, strong) id<ASPayPalPaymentsConnector> payPalPaymentsClient;
 @property (nonatomic, strong) NSMutableArray *customParameters;
 @property (nonatomic, strong) NSString *appName;
 @property (nonatomic, strong) NSString *appStoreID;
