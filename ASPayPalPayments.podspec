@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
 	s.homepage = "http://www.airservice.com"
 	s.license = "COMMERCIAL"
 	s.author = { "Daniel Bowden" => "github@bowden.in" }
-  s.source = { :git => 'https://github.com/airservice/Open-API-and-SDKs.git', :branch => "feature/paypal-payments", :tag => "ios-sdk.#{s.version.to_s}" }
+  s.source = { :git => 'https://github.com/airservice/Open-API-and-SDKs.git', :tag => "ios-sdk.#{s.version.to_s}" }
 	s.platform = :ios, '8.0'
 	s.ios.deployment_target = '8.0'
 	s.requires_arc = true
