@@ -22,7 +22,7 @@
         _airServiceKitViewController = [[AirServiceKitViewController alloc] initWithClientID:@"22c7d3fc" clientSecret:@"aada245b93feb5d8e84dfeb49296da8b" collection:@"airservice-qa-sdk" delegate:self];
         _airServiceKitViewController.appName = @"AirServiceKit Basic Demo";
         _airServiceKitViewController.appEnvironment = ASAppEnvironmentQA; //QA Environment. Remove for production
-        _airServiceKitViewController.hostAction = @"close";
+        _airServiceKitViewController.hostAction = ASHostActionTypeClose;
     }
     
     return self;

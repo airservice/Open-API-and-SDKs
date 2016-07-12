@@ -13,6 +13,15 @@ typedef NS_ENUM(NSInteger, ASAppEnvironment)
     ASAppEnvironmentProduction
 };
 
+typedef NS_ENUM(NSInteger, ASHostActionType)
+{
+    ASHostActionTypeNone = 0,
+    ASHostActionTypeClose,
+    ASHostActionTypeBack,
+    ASHostActionTypeHome,
+    ASHostActionTypeMenu
+};
+
 @protocol AirServiceKitDelegate;
 @protocol ASPayPalPaymentsConnector;
 
@@ -22,7 +31,7 @@ typedef NS_ENUM(NSInteger, ASAppEnvironment)
 @property (nonatomic, strong) IBInspectable NSString* clientSecret;
 @property (nonatomic, strong) IBInspectable NSString* collection;
 @property (nonatomic, strong) IBInspectable NSString* filenameIcon;
-@property (nonatomic, strong) IBInspectable NSString* hostAction;
+@property (nonatomic, assign) ASHostActionType hostAction;
 @property (nonatomic, strong) IBInspectable NSString* sector;
 
 @property (nonatomic, assign) ASAppEnvironment appEnvironment;
