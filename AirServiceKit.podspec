@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   
   s.name = 'AirServiceKit'
-  s.version = '2.0.454'
+  s.version = '2.1.1'
   s.summary = 'AirServiceKit'
   s.description = 'AirServiceKit SDK allows you to include AirService in your own application'
   s.license = { :type => 'COMMERCIAL', :text => 'http://www.airservice.com/contact/' }
