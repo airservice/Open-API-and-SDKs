@@ -137,6 +137,5 @@ tmp
 # credentials are not uploaded
 .env
 report.xml
-screenshots
 configuration
 buildkite-script-*
