@@ -41,7 +41,7 @@ The [Examples](https://github.com/airservice/Open-API-and-SDKs/tree/master/iOS/E
 - NSLocationWhenInUseUsageDescription = 
 ```
 
-![Info.plist](https://github.com/airservice/Open-API-and-SDKs/tree/master/iOS/Examples/Screenshots/InfoPlist1.png "Info.plist")
+[![Info.plist](https://raw.githubusercontent.com/airservice/Open-API-and-SDKs/master/iOS/Examples/Screenshots/InfoPlist1.png)](https://raw.githubusercontent.com/airservice/Open-API-and-SDKs/master/iOS/Examples/Screenshots/InfoPlist1.png)
 
 For more information see the [documentation](http://airservice.github.io/Open-API-and-SDKs/iOS/Docs/) 
 
@@ -70,7 +70,7 @@ ASPayPalPayments requires the following settings in your project's `Info.plist`:
 			- Item 0 $(PRODUCT_BUNDLE_IDENTIFIER).payments
 ```
 
-![Info.plist](https://github.com/airservice/Open-API-and-SDKs/tree/master/iOS/Examples/Screenshots/InfoPlist2.png "Info.plist")
+[![Info.plist](https://raw.githubusercontent.com/airservice/Open-API-and-SDKs/master/iOS/Examples/Screenshots/InfoPlist2.png)](https://raw.githubusercontent.com/airservice/Open-API-and-SDKs/master/iOS/Examples/Screenshots/InfoPlist2.png)
 
 ## Installation
 
