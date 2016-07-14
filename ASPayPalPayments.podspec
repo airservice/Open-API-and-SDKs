@@ -1,6 +1,7 @@
 Pod::Spec.new do |s|
+
 	s.name		= "ASPayPalPayments"
-	s.version = "2.0.454"
+	s.version = "2.1.2"
 	s.summary = "Authorising PayPal payments inside AirServiceKit"
 	s.description = "Simplifies authorising PayPal Payments. Can be used in conjunction with AirServiceKit SDK or standalone"
 	s.homepage = "http://www.airservice.com"
@@ -12,4 +13,5 @@ Pod::Spec.new do |s|
 	s.requires_arc = true
 	s.source_files = 'iOS/PayPal-Payments/*.{h,m}'
 	s.dependency 'Braintree/PayPal'
+
 end
