@@ -14,6 +14,7 @@
     <header>
       <div class="content-wrapper">
         <p><a href="index.html">AirServiceKit Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/airservice/Open-API-and-SDKs"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -74,10 +75,30 @@
 <pre class="highlight objective_c"><code><span class="n">self</span><span class="p">.</span><span class="n">viewController</span> <span class="o">=</span> <span class="p">[[</span><span class="n">AirServiceKitViewController</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithClientID</span><span class="p">:</span><span class="s">@"22c7d3fc"</span> <span class="nf">clientSecret</span><span class="p">:</span><span class="s">@"aada245b93feb5d8e84dfeb49296da8b"</span> <span class="n">collection</span><span class="o">:</span><span class="s">@"airservice-qa-sdk"</span> <span class="n">delegate</span><span class="o">:</span><span class="n">self</span><span class="p">];</span>
 </code></pre>
 
-<p>Full AirServiceKit documentation can be found at <a href="https://github.com/airservice/Open-API-and-SDKs/tree/master/iOS/Docs">/iOS/Docs</a> </p>
+<p>Full AirServiceKit documentation can be found at <a href="http://airservice.github.io/Open-API-and-SDKs/iOS/Docs/">http://airservice.github.io/Open-API-and-SDKs/iOS/Docs/</a> </p>
 <a href='#examples' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='examples'>Examples</h2>
 
-<p>The <a href="Examples">Examples</a> directory demonstrates many common scenarios for integrating AirServiceKit. These demo Xcode projects include basic manual setups, cocoapods integration, modal presentation and supporting PayPal payments.</p>
+<p>The <a href="https://github.com/airservice/Open-API-and-SDKs/tree/master/iOS/Examples">Examples</a> directory demonstrates many common scenarios for integrating AirServiceKit. These demo Xcode projects include basic manual setups, cocoapods integration, modal presentation and supporting PayPal payments.</p>
+<a href='#project-setup' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='project-setup'>Project setup</h2>
+
+<p><code>AirServiceKit</code> requires that your apply the following settings in your project&rsquo;s <code>Info.plist</code>:</p>
+<pre class="highlight plaintext"><code>- Required background modes
+    - App shares data using CoreBluetooth
+    - App downloads content from the network
+    - App downloads content in response to push notifications
+    - App registers for location updates
+
+- App Transport Security Settings
+    - Allow Arbitrary Loads = YES
+
+- Privacy - Location Usage Description =  
+- NSLocationAlwaysUsageDescription = 
+- NSLocationWhenInUseUsageDescription = 
+</code></pre>
+
+<p><img src="https://github.com/airservice/Open-API-and-SDKs/tree/master/iOS/Examples/Screenshots/InfoPlist1.png" alt="Info.plist" title="Info.plist"></p>
+
+<p>For more information see the <a href="http://airservice.github.io/Open-API-and-SDKs/iOS/Docs/">documentation</a> </p>
 <a href='#paypal-payments' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='paypal-payments'>PayPal Payments</h2>
 
 <p>Supporting PayPal payments inside AirServiceKit also requires the <a href="https://github.com/airservice/Open-API-and-SDKs">ASPayPalPayments library</a>.</p>
@@ -87,15 +108,29 @@
 <span class="n">self</span><span class="p">.</span><span class="n">viewController</span><span class="p">.</span><span class="n">payPalPaymentsClient</span> <span class="o">=</span> <span class="p">[[</span><span class="n">ASPayPalPayments</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">init</span><span class="p">];</span>
 </code></pre>
 
-<p>For more information see the <a href="https://github.com/airservice/Open-API-and-SDKs/tree/master/iOS/Docs">documentation</a> </p>
+<p>ASPayPalPayments requires the following settings in your project&rsquo;s <code>Info.plist</code>:</p>
+<pre class="highlight plaintext"><code>- LSApplicationQueriesSchemes
+    - com.paypal.ppclient.touch.v1
+    - com.paypal.ppclient.touch.v2
+    - org-appextension-feature-password-management
+
+- URL types
+    - Item 0
+        - URL Schemes
+            - Item 0 $(PRODUCT_BUNDLE_IDENTIFIER).payments
+</code></pre>
+
+<p><img src="https://github.com/airservice/Open-API-and-SDKs/tree/master/iOS/Examples/Screenshots/InfoPlist2.png" alt="Info.plist" title="Info.plist"></p>
 <a href='#installation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='installation'>Installation</h2>
 <a href='#cocoapods' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='cocoapods'>Cocoapods</h3>
 
-<p>AirService recommends using <a href="http://cocoapods.org">CocoaPods</a>. To install, simply add the following line to your Podfile:
-<code>pod &#39;AirServiceKit&#39;, :git =&gt; &#39;https://github.com/airservice/Open-API-and-SDKs.git&#39;</code></p>
+<p>AirService recommends using <a href="http://cocoapods.org">CocoaPods</a>. To install, simply add the following line to your Podfile:</p>
 
-<p>To also support PayPal payments inside AirServiceKit you must also add the following line to your Podfile:
-<code>pod &#39;ASPayPalPayments&#39;, :git =&gt; &#39;https://github.com/airservice/Open-API-and-SDKs.git&#39;</code></p>
+<p><code>pod &#39;AirServiceKit&#39;, :git =&gt; &#39;https://github.com/airservice/Open-API-and-SDKs.git&#39;</code></p>
+
+<p>To also support PayPal payments inside AirServiceKit you must also add the following line to your Podfile:</p>
+
+<p><code>pod &#39;ASPayPalPayments&#39;, :git =&gt; &#39;https://github.com/airservice/Open-API-and-SDKs.git&#39;</code></p>
 
 <p>Run <code>pod install</code> from the command line and open the <code>.xcworkspace</code> file generated by CocoaPods.</p>
 <a href='#manual' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='manual'>Manual</h3>
