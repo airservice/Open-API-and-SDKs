@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AirServiceKit  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="AirServiceKit  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">AirServiceKit Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">AirServiceKit Reference</a>
+        <img id="carat" src="img/carat.png" />
+        AirServiceKit  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/AirServiceKitViewController.html">AirServiceKitViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/ASAppEnvironment.html">ASAppEnvironment</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/ASHostActionType.html">ASHostActionType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/AirServiceKitDelegate.html">AirServiceKitDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <a href='#airservicekit' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='airservicekit'>AirServiceKit</h1>
+
+<p>AirServiceKit SDK allows you to include the AirService ordering platform right within your own iOS application.</p>
+
+<p>AirServiceKitViewController can be used directly, or subclassed, and is simple to integrate anywhere you would typically use a <code>UIViewController</code>.</p>
+<a href='#usage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='usage'>Usage</h2>
+
+<p>Simply import the AirServiceKit umbrella header to get started.</p>
+
+<p><code>#import &lt;AirServiceKit/AirServiceKit.h&gt;</code></p>
+
+<p>From there you just initialise an instance of the <code>AirServiceKitViewController</code> using your AirService credentials and you can start taking orders right away.</p>
+<pre class="highlight objective_c"><code><span class="n">self</span><span class="p">.</span><span class="n">viewController</span> <span class="o">=</span> <span class="p">[[</span><span class="n">AirServiceKitViewController</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithClientID</span><span class="p">:</span><span class="s">@"22c7d3fc"</span> <span class="nf">clientSecret</span><span class="p">:</span><span class="s">@"aada245b93feb5d8e84dfeb49296da8b"</span> <span class="n">collection</span><span class="o">:</span><span class="s">@"airservice-qa-sdk"</span> <span class="n">delegate</span><span class="o">:</span><span class="n">self</span><span class="p">];</span>
+</code></pre>
+
+<p>Full AirServiceKit documentation can be found at <a href="https://github.com/airservice/Open-API-and-SDKs/tree/master/iOS/Docs">/iOS/Docs</a> </p>
+<a href='#examples' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='examples'>Examples</h2>
+
+<p>The <a href="Examples">Examples</a> directory demonstrates many common scenarios for integrating AirServiceKit. These demo Xcode projects include basic manual setups, cocoapods integration, modal presentation and supporting PayPal payments.</p>
+<a href='#paypal-payments' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='paypal-payments'>PayPal Payments</h2>
+
+<p>Supporting PayPal payments inside AirServiceKit also requires the <a href="https://github.com/airservice/Open-API-and-SDKs">ASPayPalPayments library</a>.</p>
+
+<p>You must supply an instance of <code>ASPayPalPayments</code> to <code>AirServiceKit</code></p>
+<pre class="highlight objective_c"><code><span class="n">self</span><span class="p">.</span><span class="n">viewController</span><span class="p">.</span><span class="n">acceptPayPalPayments</span> <span class="o">=</span> <span class="nb">YES</span><span class="p">;</span>
+<span class="n">self</span><span class="p">.</span><span class="n">viewController</span><span class="p">.</span><span class="n">payPalPaymentsClient</span> <span class="o">=</span> <span class="p">[[</span><span class="n">ASPayPalPayments</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">init</span><span class="p">];</span>
+</code></pre>
+
+<p>For more information see the <a href="https://github.com/airservice/Open-API-and-SDKs/tree/master/iOS/Docs">documentation</a> </p>
+<a href='#installation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='installation'>Installation</h2>
+<a href='#cocoapods' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='cocoapods'>Cocoapods</h3>
+
+<p>AirService recommends using <a href="http://cocoapods.org">CocoaPods</a>. To install, simply add the following line to your Podfile:
+<code>pod &#39;AirServiceKit&#39;, :git =&gt; &#39;https://github.com/airservice/Open-API-and-SDKs.git&#39;</code></p>
+
+<p>To also support PayPal payments inside AirServiceKit you must also add the following line to your Podfile:
+<code>pod &#39;ASPayPalPayments&#39;, :git =&gt; &#39;https://github.com/airservice/Open-API-and-SDKs.git&#39;</code></p>
+
+<p>Run <code>pod install</code> from the command line and open the <code>.xcworkspace</code> file generated by CocoaPods.</p>
+<a href='#manual' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='manual'>Manual</h3>
+
+<ul>
+<li>To manually install AirServiceKit in your Xcode project, download the latest release of <code>AirServiceKit.framework</code>.</li>
+<li>Go to your Xcode project’s “General” settings. Drag <code>AirServiceKit.framework</code> to the <code>Embedded Binaries</code> section.</li>
+<li>If you experience problems with unknown headers go to your target&rsquo;s <code>Build Settings</code> and add the parent path to <code>AirServiceKit.framework</code> in the <code>Framework Search Paths</code> section.</li>
+</ul>
+<a href='#author' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='author'>Author</h2>
+
+<p><a href="http://www.github.com/airservice">www.github.com/airservice</a></p>
+
+<p><a href="http://www.airservice.com">www.airservice.com</a></p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2016-07-14)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
