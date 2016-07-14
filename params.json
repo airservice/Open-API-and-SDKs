@@ -1,6 +1,6 @@
 {
   "name": "Open API & SDKs",
   "tagline": "",
-  "body": "## API\r\n[Ordering API Documentation v3](API/ordering-api-v3.html)\r\n\r\n## iOS\r\n[Framework](iOS)\r\n\r\n[Docs](iOS/Docs/index.html)\r\n\r\n## Android\r\n[SDK](Android)\r\n\r\n## Contact\r\n[airservice.com](http://www.airservice.com)\r\n\r\n[github.com/airservice](http://www.github.com/airservice)",
+  "body": "## API\r\n[Ordering API Documentation v3](API/ordering-api-v3.html)\r\n\r\n## iOS\r\n[Docs](iOS/Docs/index.html)\r\n\r\n[Framework](https://github.com/airservice/Open-API-and-SDKs/tree/master/iOS)\r\n\r\n## Android\r\n[SDK](Android)\r\n\r\n## Contact\r\n[airservice.com](http://www.airservice.com)\r\n\r\n[github.com/airservice](http://www.github.com/airservice)",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
