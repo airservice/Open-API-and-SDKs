@@ -32,12 +32,25 @@ platform :ios do
 		)
 		add_git_tag tag: "ios-sdk.#{new_version}"
 		# push_to_git_remote
+		publish_docs
 	end
 
 	desc "Generates the latest AirServiceKit documentation at iOS/Docs"
 	lane :documentation do
 		config = File.join("iOS", ".jazzy.yaml")
 		jazzy config: config
+	end
+
+	desc "Publishes the AirServiceKit docs to github pages"
+	desc "Accessible from http://airservice.github.io/Open-API-and-SDKs/iOS/Docs"
+	lane :publish_docs do
+		sh "git checkout gh-pages"
+		sh "git checkout master -- iOS/Docs"
+		git_commit(
+			path: "iOS/Docs",
+			message: "Auto update iOS Docs"
+		)
+		# push_to_git_remote
 	end
 
 	private_lane :valid_deployment_version_number do |options|

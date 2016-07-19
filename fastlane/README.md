@@ -20,6 +20,13 @@ Optionally, provide a version using version_number:1.2.3
 fastlane ios documentation
 ```
 Generates the latest AirServiceKit documentation at iOS/Docs
+### ios publish_docs
+```
+fastlane ios publish_docs
+```
+Publishes the AirServiceKit docs to github pages
+
+Accessible from http://airservice.github.io/Open-API-and-SDKs/iOS/Docs
 
 ----
 
