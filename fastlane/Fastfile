@@ -22,6 +22,12 @@ platform :ios do
 
 		pod_lib_lint allow_warnings: true
 		documentation
+		git_commit(
+			path: ['AirServiceKit.podspec', 'ASPayPalPayments.podspec', 'iOS/Docs'],
+			message: "Release AirServiceKit #{deploy_version}"
+		)
+		add_git_tag tag: "ios-sdk.#{new_version}"
+		# push_to_git_remote
 	end
 
 	desc "Generates the latest AirServiceKit documentation at iOS/Docs"
