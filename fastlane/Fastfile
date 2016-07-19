@@ -6,10 +6,14 @@ fastlane_version "1.97.2"
 
 platform :ios do
 	
-	desc "Deploys a new release of AirServiceKit to current branch"
+	desc "Deploys a new release of AirServiceKit"
 	desc "Version will be taken from the the AirServiceKit.framework version unless specified"
 	desc "Optionally, provide a version using version_number:1.2.3"
 	lane :deploy do |options|
+		
+		ensure_git_branch branch:master
+		ensure_git_status_clean
+
 		deploy_version = valid_deployment_version_number options
 		version_bump_podspec(
 			path: "AirServiceKit.podspec",
