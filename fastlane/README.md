@@ -15,6 +15,11 @@ Deploys a new release of AirServiceKit to current branch
 Version will be taken from the the AirServiceKit.framework version unless specified
 
 Optionally, provide a version using version_number:1.2.3
+### ios documentation
+```
+fastlane ios documentation
+```
+Generates the latest AirServiceKit documentation at iOS/Docs
 
 ----
 

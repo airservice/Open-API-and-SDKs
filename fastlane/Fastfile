@@ -10,10 +10,7 @@ platform :ios do
 	desc "Version will be taken from the the AirServiceKit.framework version unless specified"
 	desc "Optionally, provide a version using version_number:1.2.3"
 	lane :deploy do |options|
-
 		deploy_version = valid_deployment_version_number options
-
-		
 		version_bump_podspec(
 			path: "AirServiceKit.podspec",
 			version_number: deploy_version
@@ -22,8 +19,15 @@ platform :ios do
 			path: "ASPayPalPayments.podspec",
 			version_number: deploy_version
 		)
-		pod_lib_lint allow_warnings: true
 
+		pod_lib_lint allow_warnings: true
+		documentation
+	end
+
+	desc "Generates the latest AirServiceKit documentation at iOS/Docs"
+	lane :documentation do
+		config = File.join("iOS", ".jazzy.yaml")
+		jazzy config: config
 	end
 
 	private_lane :valid_deployment_version_number do |options|
