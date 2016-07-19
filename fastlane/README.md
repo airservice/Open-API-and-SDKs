@@ -10,7 +10,7 @@ sudo gem install fastlane
 ```
 fastlane ios deploy
 ```
-Deploys a new release of AirServiceKit to current branch
+Deploys a new release of AirServiceKit
 
 Version will be taken from the the AirServiceKit.framework version unless specified
 

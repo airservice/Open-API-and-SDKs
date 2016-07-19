@@ -11,7 +11,7 @@ platform :ios do
 	desc "Optionally, provide a version using version_number:1.2.3"
 	lane :deploy do |options|
 		
-		ensure_git_branch branch:master
+		ensure_git_branch branch: "master"
 		ensure_git_status_clean
 
 		deploy_version = valid_deployment_version_number options
