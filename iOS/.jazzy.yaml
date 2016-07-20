@@ -1,0 +1,14 @@
+objc: true
+module: AirServiceKit
+author: AirService
+author_url: http://www.airservice.com
+github_url: https://github.com/airservice/Open-API-and-SDKs
+github_file_prefix: https://github.com/airservice/Open-API-and-SDKs/tree/master
+copyright: '© 2016 [AirService](http://airservice.com)'
+umbrella_header: 'AirServiceKit.framework/Headers/AirServiceKit.h'
+readme: 'README.md'
+framework_root: .
+sdk: iphonesimulator
+output: 'Docs'
+clean: true
+swift_version: 2.2
