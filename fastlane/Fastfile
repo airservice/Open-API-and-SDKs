@@ -30,8 +30,8 @@ platform :ios do
 			path: ['AirServiceKit.podspec', 'ASPayPalPayments.podspec', 'iOS/Docs'],
 			message: "Release AirServiceKit #{deploy_version}"
 		)
-		add_git_tag tag: "ios-sdk.#{new_version}"
-		# push_to_git_remote
+		add_git_tag tag: "ios-sdk.#{deploy_version}"
+		push_to_git_remote
 		publish_docs
 	end
 
@@ -44,13 +44,22 @@ platform :ios do
 	desc "Publishes the AirServiceKit docs to github pages"
 	desc "Accessible from http://airservice.github.io/Open-API-and-SDKs/iOS/Docs"
 	lane :publish_docs do
-		sh "git checkout gh-pages"
-		sh "git checkout master -- iOS/Docs"
-		git_commit(
-			path: "iOS/Docs",
-			message: "Auto update iOS Docs"
-		)
-		# push_to_git_remote
+		Dir.mktmpdir { |dir|
+			Dir.chdir(dir) {
+				sh "git clone git@github.com:airservice/Open-API-and-SDKs #{dir}"
+				sh "git checkout gh-pages"
+				sh "git checkout master -- iOS/Docs"
+				
+				clean = `git status iOS/Docs --porcelain`.empty?
+				if !clean
+					sh "git add iOS/Docs --all" #Add any new docs
+					sh "git commit -m 'Auto update iOS Docs' iOS/Docs"
+					sh "git push origin gh-pages:gh-pages"
+				else
+					UI.message "There are no changes to iOS/Docs".blue
+				end
+			}
+		}
 	end
 
 	private_lane :valid_deployment_version_number do |options|
