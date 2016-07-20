@@ -27,6 +27,11 @@ fastlane ios publish_docs
 Publishes the AirServiceKit docs to github pages
 
 Accessible from http://airservice.github.io/Open-API-and-SDKs/iOS/Docs
+### ios update_examples
+```
+fastlane ios update_examples
+```
+Updates the AirServiceKit and ASPayPalPayments pods in the example projects
 
 ----
 

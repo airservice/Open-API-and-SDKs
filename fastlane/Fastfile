@@ -62,6 +62,12 @@ platform :ios do
 		}
 	end
 
+	desc "Updates the AirServiceKit and ASPayPalPayments pods in the example projects"
+	lane :update_examples do
+		sh "bundle exec pod update AirServiceKit --project-directory=../iOS/Examples/CocoapodsDemo"
+		sh "bundle exec pod update AirServiceKit ASPayPalPayments --project-directory=../iOS/Examples/SupportingPayPalPayments"
+	end
+
 	private_lane :valid_deployment_version_number do |options|
 		deploy_version = framework_version
 		if options[:version_number] 
