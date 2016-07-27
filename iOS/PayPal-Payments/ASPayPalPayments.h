@@ -14,9 +14,9 @@
 @interface ASPayPalPayments : NSObject <ASPayPalPaymentsConnector>
 
 @property (nonatomic, strong) NSString *clientToken;
-@property (nonatomic, strong) UIViewController *hostViewController;
+@property (nonatomic, strong) UIViewController *payPalHostViewController;
 
-- (instancetype)initWithClientToken:(NSString *)clientToken hostViewController:(UIViewController *)viewController;
+- (instancetype)initWithClientToken:(NSString *)clientToken payPalHostViewController:(UIViewController *)viewController;
 - (void)authorizeVaultFlow:(void (^)(BOOL success, NSString *nonce, NSError *error))completionBlock;
 - (BOOL)handleOpenURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication;
 

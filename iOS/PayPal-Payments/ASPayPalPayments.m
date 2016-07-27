@@ -18,12 +18,12 @@
 
 @implementation ASPayPalPayments
 
-- (instancetype)initWithClientToken:(NSString *)clientToken hostViewController:(UIViewController *)viewController
+- (instancetype)initWithClientToken:(NSString *)clientToken payPalHostViewController:(UIViewController *)viewController
 {
     if ((self = [self init]))
     {
         _clientToken = clientToken;
-        _hostViewController = viewController;
+        _payPalHostViewController = viewController;
     }
     
     return self;
@@ -41,7 +41,7 @@
 
 - (void)authorizeVaultFlow:(void (^)(BOOL, NSString *, NSError *))completionBlock
 {
-    if (self.clientToken != nil && self.hostViewController != nil)
+    if (self.clientToken != nil && self.payPalHostViewController != nil)
     {
         BTAPIClient *braintreeClient = [[BTAPIClient alloc] initWithAuthorization:self.clientToken];
         BTPayPalDriver *payPalDriver = [[BTPayPalDriver alloc] initWithAPIClient:braintreeClient];
@@ -90,12 +90,12 @@
 
 - (void)paymentDriver:(id)driver requestsPresentationOfViewController:(UIViewController *)viewController
 {
-    [self.hostViewController presentViewController:viewController animated:YES completion:nil];
+    [self.payPalHostViewController presentViewController:viewController animated:YES completion:nil];
 }
 
 - (void)paymentDriver:(id)driver requestsDismissalOfViewController:(UIViewController *)viewController
 {
-    [self.hostViewController dismissViewControllerAnimated:YES completion:nil];
+    [self.payPalHostViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
