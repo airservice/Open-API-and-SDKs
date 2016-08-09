@@ -161,7 +161,9 @@ typedef NS_ENUM(NSInteger, ASHostActionType)
 
 
 /**
- Your application display name as shown on the iOS homescreen.
+ Override your application display name.
+ 
+ @note This is optional and will otherwise be taken from your app bundle automatically to match what is shown on the iOS homescreen.
  */
 @property (nonatomic, strong) NSString *appName;
 
@@ -183,14 +185,6 @@ typedef NS_ENUM(NSInteger, ASHostActionType)
  ```
  */
 @property (nonatomic, strong) NSDictionary *notification;
-
-
-/**
- The filename of your app icon inside your application bundle.
- 
- @note This is optional and is used by AirServiceKit on the initial loading screen.
- */
-@property (nonatomic, strong) IBInspectable NSString* filenameIcon;
 
 
 /**
