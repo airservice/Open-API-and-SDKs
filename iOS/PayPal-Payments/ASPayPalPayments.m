@@ -65,6 +65,14 @@
             }
         }];
     }
+    else
+    {
+        if (completionBlock)
+        {
+            NSError *error = [NSError errorWithDomain:@"com.airservice.ASPayPalPayments" code:-1 userInfo:@{NSLocalizedDescriptionKey:@"Missing client token or host view controller"}];
+            completionBlock(NO, nil, error);
+        }
+    }
 }
 
 - (BOOL)handleOpenURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication
@@ -72,7 +80,7 @@
     if ([url.scheme localizedCaseInsensitiveCompare:[[self class] urlScheme]] == NSOrderedSame) {
         return [BTAppSwitch handleOpenURL:url sourceApplication:sourceApplication];
     }
-    
+
     return NO;
 }
 
