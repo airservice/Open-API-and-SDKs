@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		1Ofi+NrdLzNjheZVFh37gYuQFeQ=
+		/Wkme0VmFgANPKdwfJkOCN27DdE=
 		</data>
 		<key>Headers/AirServiceKit-umbrella.h</key>
 		<data>
@@ -18,11 +18,11 @@
 		</data>
 		<key>Headers/AirServiceKitViewController.h</key>
 		<data>
-		6emYkLmwEIWbEUg7CRcUmUJbRaY=
+		lACAPE09h86AoH5s7ft/pjZHIMY=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		znJbh/V6N/Wq0Z4pNr/QaCudycY=
+		wgTCn5mCYjZzwSrPHiSggWGEgVI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -35,11 +35,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1Ofi+NrdLzNjheZVFh37gYuQFeQ=
+			/Wkme0VmFgANPKdwfJkOCN27DdE=
 			</data>
 			<key>hash2</key>
 			<data>
-			QRVYN/eZjSOaFaI0EgUxzhWHCS730xrgY/DBmH+tudg=
+			PcCMVz1vqCndC5Rg+BbAGw5TyQs2zQ8TBDEQzscV4tE=
 			</data>
 		</dict>
 		<key>Headers/AirServiceKit-umbrella.h</key>
@@ -68,11 +68,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6emYkLmwEIWbEUg7CRcUmUJbRaY=
+			lACAPE09h86AoH5s7ft/pjZHIMY=
 			</data>
 			<key>hash2</key>
 			<data>
-			DQHpu0Kyv/LSdnfmnTYMQn9Zf0pJDYZMAwsCHsd3EWI=
+			2NR8bbNc3R3NhQ38Xoj7n/vu5Rcc+E7c1WjmTZqFDpY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

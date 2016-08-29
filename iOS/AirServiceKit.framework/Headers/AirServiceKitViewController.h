@@ -228,6 +228,15 @@ typedef NS_ENUM(NSInteger, ASHostActionType)
 
 
 /**
+ Enables `AirServiceKit` logging to the console. This is useful for debugging during development but should be disabled in production applications.
+ 
+ @note Defaults to NO
+ @note Advanced property, not required for standard implementation.
+ */
+@property (nonatomic, assign) BOOL loggingEnabled;
+
+
+/**
  Convenience initializer to create an AirServiceKitViewController instance.
  Its parameters are required in order to authenticate with AirService.
  
@@ -255,6 +264,15 @@ typedef NS_ENUM(NSInteger, ASHostActionType)
  @param token A device token object
  */
 - (void)addPushDeviceToken:(NSData *)token;
+
+
+/**
+ A string representation of the saved device token, if any, that `AirServiceKit` currently holds.
+ 
+ @see `-addPushDeviceToken:`
+ @return A device token string
+ */
++ (NSString *)pushDeviceToken;
 
 
 /**
