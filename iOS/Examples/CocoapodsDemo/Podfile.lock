@@ -1,5 +1,5 @@
 PODS:
-  - AirServiceKit (2.2.1)
+  - AirServiceKit (2.2.2)
 
 DEPENDENCIES:
   - AirServiceKit (from `https://github.com/airservice/Open-API-and-SDKs.git`)
@@ -10,11 +10,11 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   AirServiceKit:
-    :commit: f29954425a929c67f548c2482776879f02c4b75e
+    :commit: 3ffe42d96c61ba896d0ebb2bfaf93613f768b492
     :git: https://github.com/airservice/Open-API-and-SDKs.git
 
 SPEC CHECKSUMS:
-  AirServiceKit: 2849e1c915cdda5e0c0614c842b89d3053c93326
+  AirServiceKit: 9b75eac0c805ac22e315b006aa5556fa2b4aedec
 
 PODFILE CHECKSUM: 179887e57d8fe4a562835371d9e3a09d61619527
 
