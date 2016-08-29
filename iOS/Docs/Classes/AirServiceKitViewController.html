@@ -720,6 +720,53 @@ Provide an initialised instance of ASPayPalPayments as well as setting acceptPay
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(cs)AirServiceKitViewController(py)loggingEnabled"></a>
+                    <a name="//apple_ref/objc/Property/loggingEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)AirServiceKitViewController(py)loggingEnabled">loggingEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Enables <code>AirServiceKit</code> logging to the console. This is useful for debugging during development but should be disabled in production applications.</p>
+
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Defaults to NO
+
+</div>
+
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Advanced property, not required for standard implementation.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">loggingEnabled</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">loggingEnabled</span><span class="p">:</span> <span class="kt">Int32</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/airservice/Open-API-and-SDKs/tree/master/iOS/AirServiceKit.framework/Headers/AirServiceKitViewController.h#L236">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(cs)AirServiceKitViewController(im)initWithClientID:clientSecret:collection:delegate:"></a>
                     <a name="//apple_ref/objc/Method/-initWithClientID:clientSecret:collection:delegate:" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)AirServiceKitViewController(im)initWithClientID:clientSecret:collection:delegate:">-initWithClientID:clientSecret:collection:delegate:</a>
@@ -815,7 +862,7 @@ Its parameters are required in order to authenticate with AirService.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/airservice/Open-API-and-SDKs/tree/master/iOS/AirServiceKit.framework/Headers/AirServiceKitViewController.h#L240">Show on GitHub</a>
+                        <a href="https://github.com/airservice/Open-API-and-SDKs/tree/master/iOS/AirServiceKit.framework/Headers/AirServiceKitViewController.h#L249">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -878,7 +925,53 @@ to communicate order related messages to customers.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/airservice/Open-API-and-SDKs/tree/master/iOS/AirServiceKit.framework/Headers/AirServiceKitViewController.h#L257">Show on GitHub</a>
+                        <a href="https://github.com/airservice/Open-API-and-SDKs/tree/master/iOS/AirServiceKit.framework/Headers/AirServiceKitViewController.h#L266">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)AirServiceKitViewController(cm)pushDeviceToken"></a>
+                    <a name="//apple_ref/objc/Method/+pushDeviceToken" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)AirServiceKitViewController(cm)pushDeviceToken">+pushDeviceToken</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A string representation of the saved device token, if any, that <code>AirServiceKit</code> currently holds.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <code><a href="../Classes/AirServiceKitViewController.html#/c:objc(cs)AirServiceKitViewController(im)addPushDeviceToken:">-addPushDeviceToken:</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">pushDeviceToken</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">pushDeviceToken</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">AnyObject</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A device token string</p>
+
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/airservice/Open-API-and-SDKs/tree/master/iOS/AirServiceKit.framework/Headers/AirServiceKitViewController.h#L275">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -989,7 +1082,7 @@ for the key/value pair <code>&quot;source&quot;:&quot;airservice&quot;</code> an
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/airservice/Open-API-and-SDKs/tree/master/iOS/AirServiceKit.framework/Headers/AirServiceKitViewController.h#L291">Show on GitHub</a>
+                        <a href="https://github.com/airservice/Open-API-and-SDKs/tree/master/iOS/AirServiceKit.framework/Headers/AirServiceKitViewController.h#L309">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1084,7 +1177,7 @@ use of URL schemes you can check the return value from this method.
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/airservice/Open-API-and-SDKs/tree/master/iOS/AirServiceKit.framework/Headers/AirServiceKitViewController.h#L318">Show on GitHub</a>
+                        <a href="https://github.com/airservice/Open-API-and-SDKs/tree/master/iOS/AirServiceKit.framework/Headers/AirServiceKitViewController.h#L336">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
