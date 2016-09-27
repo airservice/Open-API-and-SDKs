@@ -1,6 +1,6 @@
 PODS:
-  - AirServiceKit (2.3.1)
-  - ASPayPalPayments (2.3.1):
+  - AirServiceKit (2.4.0)
+  - ASPayPalPayments (2.4.0):
     - Braintree/PayPal (~> 4.3.2)
   - Braintree/Core (4.3.2)
   - Braintree/PayPal (4.3.2):
@@ -27,15 +27,15 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   AirServiceKit:
-    :commit: 3d53d048dae291f8ba67759cd37a781db1a287fc
+    :commit: 7a23bcbfc43b46b81c4a0b2d21117d5e7ff338d0
     :git: https://github.com/airservice/Open-API-and-SDKs.git
   ASPayPalPayments:
-    :commit: 3d53d048dae291f8ba67759cd37a781db1a287fc
+    :commit: 7a23bcbfc43b46b81c4a0b2d21117d5e7ff338d0
     :git: https://github.com/airservice/Open-API-and-SDKs.git
 
 SPEC CHECKSUMS:
-  AirServiceKit: 0a8157a4d36b312fd92ccb16c2adda05357addc3
-  ASPayPalPayments: 0c0ca86afe779e7ff0b1fa71e921ada52929023e
+  AirServiceKit: cc65966bef55ad0b8a457fe83af57f184ae2f7e9
+  ASPayPalPayments: a04b61aa7dc8703fbb2a117b39dd4094feaffb6d
   Braintree: 6f95d77e27d3bec2e54fd1bc4ae216ffeb9a4755
 
 PODFILE CHECKSUM: 5ff290ed9e5d182e734efbdf59c2f72164e0136f
