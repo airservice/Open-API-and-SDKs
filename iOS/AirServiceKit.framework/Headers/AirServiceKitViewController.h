@@ -228,6 +228,14 @@ typedef NS_ENUM(NSInteger, ASHostActionType)
 
 
 /**
+ Override the default colour with your brand colour.
+ 
+ @note This is optional, not required for standard implementation.
+ */
+@property (nonatomic, strong) UIColor *brandColour;
+
+
+/**
  Enables `AirServiceKit` logging to the console. This is useful for debugging during development but should be disabled in production applications.
  
  @note Defaults to NO
