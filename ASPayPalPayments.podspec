@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
 	s.name = "ASPayPalPayments"
-	s.version = "2.4.1"
+	s.version = "2.4.2"
 	s.summary = "Authorising PayPal payments inside AirServiceKit"
 	s.description = "Simplifies authorising PayPal Payments. Can be used in conjunction with AirServiceKit SDK or standalone"
 	s.homepage = "http://www.airservice.com"
