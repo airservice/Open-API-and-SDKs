@@ -11,4 +11,3 @@ framework_root: .
 sdk: iphonesimulator
 output: 'Docs'
 clean: true
-swift_version: 2.2
