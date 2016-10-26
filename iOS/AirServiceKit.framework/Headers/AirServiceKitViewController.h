@@ -161,7 +161,9 @@ typedef NS_ENUM(NSInteger, ASHostActionType)
 
 
 /**
- Your application display name as shown on the iOS homescreen.
+ Override your application display name.
+ 
+ @note This is optional and will otherwise be taken from your app bundle automatically to match what is shown on the iOS homescreen.
  */
 @property (nonatomic, strong) NSString *appName;
 
@@ -183,14 +185,6 @@ typedef NS_ENUM(NSInteger, ASHostActionType)
  ```
  */
 @property (nonatomic, strong) NSDictionary *notification;
-
-
-/**
- The filename of your app icon inside your application bundle.
- 
- @note This is optional and is used by AirServiceKit on the initial loading screen.
- */
-@property (nonatomic, strong) IBInspectable NSString* filenameIcon;
 
 
 /**
@@ -234,6 +228,23 @@ typedef NS_ENUM(NSInteger, ASHostActionType)
 
 
 /**
+ Override the default colour with your brand colour.
+ 
+ @note This is optional, not required for standard implementation.
+ */
+@property (nonatomic, strong) UIColor *brandColour;
+
+
+/**
+ Enables `AirServiceKit` logging to the console. This is useful for debugging during development but should be disabled in production applications.
+ 
+ @note Defaults to NO
+ @note Advanced property, not required for standard implementation.
+ */
+@property (nonatomic, assign) BOOL loggingEnabled;
+
+
+/**
  Convenience initializer to create an AirServiceKitViewController instance.
  Its parameters are required in order to authenticate with AirService.
  
@@ -261,6 +272,15 @@ typedef NS_ENUM(NSInteger, ASHostActionType)
  @param token A device token object
  */
 - (void)addPushDeviceToken:(NSData *)token;
+
+
+/**
+ A string representation of the saved device token, if any, that `AirServiceKit` currently holds.
+ 
+ @see `-addPushDeviceToken:`
+ @return A device token string
+ */
++ (NSString *)pushDeviceToken;
 
 
 /**
