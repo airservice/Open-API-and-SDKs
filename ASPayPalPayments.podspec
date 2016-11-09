@@ -12,6 +12,6 @@ Pod::Spec.new do |s|
 	s.ios.deployment_target = '8.0'
 	s.requires_arc = true
 	s.source_files = 'iOS/PayPal-Payments/*.{h,m}'
-	s.dependency 'Braintree/PayPal', '~>4.3.2'
+	s.dependency 'Braintree/PayPal', '~>4.7.1'
 
 end
