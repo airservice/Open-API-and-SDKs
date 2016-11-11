@@ -28,13 +28,15 @@ The [Examples](https://github.com/airservice/Open-API-and-SDKs/tree/master/iOS/E
 
 ```
 - Required background modes
-	- App shares data using CoreBluetooth
-	- App downloads content from the network
-	- App downloads content in response to push notifications
-	- App registers for location updates
+	- App downloads content from the network (fetch)
+	- App downloads content in response to push notifications (remote-notification)
 
 - App Transport Security Settings
-	- Allow Arbitrary Loads = YES
+	- Exception Domains
+		- airservice.com
+			- NSIncludesSubdomains = YES
+			- NSThirdPartyExceptionRequiresForwardSecrecy = NO
+			- NSExceptionMinimumTLSVersion = TLSv1.0
 
 - Privacy - Location Usage Description =  
 - NSLocationAlwaysUsageDescription = 

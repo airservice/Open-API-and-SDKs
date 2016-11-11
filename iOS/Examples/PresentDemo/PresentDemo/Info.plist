@@ -22,6 +22,32 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>airservice.com</key>
+			<dict>
+				<key>NSExceptionMinimumTLSVersion</key>
+				<string>TLSv1.0</string>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+				<false/>
+			</dict>
+		</dict>
+	</dict>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This allows us to show you which venues are closest to you.</string>
+	<key>NSLocationUsageDescription</key>
+	<string>This allows us to show you which venues are closest to you.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This allows us to show you which venues are closest to you.</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>remote-notification</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -38,24 +64,6 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>This allows us to show you which venues are closest to you.</string>
-	<key>NSLocationUsageDescription</key>
-	<string>This allows us to show you which venues are closest to you.</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>This allows us to show you which venues are closest to you.</string>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>bluetooth-peripheral</string>
-		<string>fetch</string>
-		<string>remote-notification</string>
-		<string>location</string>
 	</array>
 </dict>
 </plist>
