@@ -103,7 +103,7 @@
 
 - (void)paymentDriver:(id)driver requestsDismissalOfViewController:(UIViewController *)viewController
 {
-    [self.payPalHostViewController dismissViewControllerAnimated:YES completion:nil];
+    [viewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
