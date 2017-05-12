@@ -2,15 +2,15 @@
 
 # This is the minimum version number required.
 # Update this, if you use features of a newer version
-fastlane_version "1.105.2"
+fastlane_version "2.30.1"
 
 platform :ios do
-	
+
 	desc "Deploys a new release of AirServiceKit"
 	desc "Version will be taken from the the AirServiceKit.framework version unless specified"
 	desc "Optionally, provide a version using version_number:1.2.3"
 	lane :deploy do |options|
-		
+
 		ensure_git_branch branch: "master"
 		ensure_git_status_clean
 
@@ -49,7 +49,7 @@ platform :ios do
 				sh "git clone git@github.com:airservice/Open-API-and-SDKs #{dir}"
 				sh "git checkout gh-pages"
 				sh "git checkout master -- iOS/Docs"
-				
+
 				clean = `git status iOS/Docs --porcelain`.empty?
 				if !clean
 					sh "git add iOS/Docs --all" #Add any new docs
@@ -70,9 +70,9 @@ platform :ios do
 
 	private_lane :valid_deployment_version_number do |options|
 		deploy_version = framework_version
-		if options[:version_number] 
+		if options[:version_number]
 			raise "version_number must take the format 1.2.3" unless options[:version_number] =~ /\d.\d.\d/
-			if !is_version_equal(deploy_version, options[:version_number])				
+			if !is_version_equal(deploy_version, options[:version_number])
 					UI.user_error! "Aborted" unless prompt(text: "Supplied version is different to AirServiceKit.framework version (#{deploy_version}). Continue?".yellow, boolean: true)
 					deploy_version = options[:version_number]
 			end
@@ -88,7 +88,7 @@ platform :ios do
 	private_lane :framework_version do
 		path = File.join("..", "iOS", "AirServiceKit.framework", "Info.plist")
     UI.user_error!("Could not find file at path '#{path}'") unless File.exist?(path)
-    
+
     Dir.mktmpdir { |dir|
     	FileUtils.cp(path, dir)
     	plist = File.join(dir, "Info.plist")
