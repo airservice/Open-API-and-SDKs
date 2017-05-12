@@ -57,6 +57,10 @@ typedef NS_ENUM(NSInteger, ASHostActionType)
  */
 @interface AirServiceKitViewController : UIViewController
 
+/**
+ Your application code as provided by AirService
+ */
+@property (nonatomic, strong) IBInspectable NSString* appCode;
 
 /** 
  Your client identifier for the AirService API
@@ -248,13 +252,14 @@ typedef NS_ENUM(NSInteger, ASHostActionType)
  Convenience initializer to create an AirServiceKitViewController instance.
  Its parameters are required in order to authenticate with AirService.
  
+ @param appCode Your application code as provided by AirService
  @param clientID Your client identifier for the AirService API
  @param clientSecret Your client secret for the AirService API
  @param collection Your collection name as provided by AirService
  @param delegate A delegate object adopting `AirServiceKitDelegate` that wishes to receive messages
  @return An `AirServiceKitViewController` instance
  */
-- (instancetype)initWithClientID:(NSString *)clientID clientSecret:(NSString *)clientSecret collection:(NSString *)collection delegate:(id<AirServiceKitDelegate>)delegate;
+- (instancetype)initWithAppCode:(NSString *)appCode clientID:(NSString *)clientID clientSecret:(NSString *)clientSecret collection:(NSString *)collection delegate:(id<AirServiceKitDelegate>)delegate;
 
 
 /**
