@@ -28,6 +28,16 @@
 				<string>$(PRODUCT_BUNDLE_IDENTIFIER).payments</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>airservice-qa-sdk</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>airservice-qa-sdk</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>

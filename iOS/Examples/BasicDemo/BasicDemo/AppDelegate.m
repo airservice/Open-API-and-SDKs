@@ -20,7 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    self.viewController = [[AirServiceKitViewController alloc] initWithClientID:@"22c7d3fc" clientSecret:@"aada245b93feb5d8e84dfeb49296da8b" collection:@"airservice-qa-sdk" delegate:self];
+    self.viewController = [[AirServiceKitViewController alloc] initWithAppCode:@"airservice-qa-sdk" clientID:@"22c7d3fc" clientSecret:@"aada245b93feb5d8e84dfeb49296da8b" collection:@"airservice-qa-sdk" delegate:self];
     self.viewController.appName = @"AirServiceKit Basic Demo";
     self.viewController.appEnvironment = ASAppEnvironmentQA; //QA Environment. Remove for production
     self.viewController.loggingEnabled = YES;
