@@ -16,7 +16,7 @@ From there you just initialise an instance of the `AirServiceKitViewController` 
 self.viewController = [[AirServiceKitViewController alloc] initWithClientID:@"22c7d3fc" clientSecret:@"aada245b93feb5d8e84dfeb49296da8b" collection:@"airservice-qa-sdk" delegate:self];
 ```
 
-Full AirServiceKit documentation can be found at [http://airservice.github.io/Open-API-and-SDKs/iOS/Docs/](http://airservice.github.io/Open-API-and-SDKs/iOS/Docs/) 
+Full AirServiceKit documentation can be found at [http://airservice.github.io/Open-API-and-SDKs/iOS/Docs/](http://airservice.github.io/Open-API-and-SDKs/iOS/Docs/)
 
 ## Examples
 
@@ -39,13 +39,22 @@ The [Examples](https://github.com/airservice/Open-API-and-SDKs/tree/master/iOS/E
 			- NSExceptionMinimumTLSVersion = TLSv1.0
 
 - Privacy - Location Usage Description =  
-- NSLocationAlwaysUsageDescription = 
-- NSLocationWhenInUseUsageDescription = 
+- NSLocationAlwaysUsageDescription =
+- NSLocationWhenInUseUsageDescription =
 ```
 
 [![Info.plist](https://raw.githubusercontent.com/airservice/Open-API-and-SDKs/master/iOS/Examples/Screenshots/InfoPlist1.png)](https://raw.githubusercontent.com/airservice/Open-API-and-SDKs/master/iOS/Examples/Screenshots/InfoPlist1.png)
 
-For more information see the [documentation](http://airservice.github.io/Open-API-and-SDKs/iOS/Docs/) 
+To provide a seamless password reset flow AirService uses a URL scheme to automatically return a customer to the app. Please provide AirService with a URL scheme that will open your application straight into AirService Ordering, ie. `com.company.appname://airservice`.
+
+```
+- URL types
+	- Item 0
+		- URL Schemes
+			- Item 0 com.company.appname://airservice
+```
+
+For more information see the [documentation](http://airservice.github.io/Open-API-and-SDKs/iOS/Docs/)
 
 ## PayPal Payments
 
@@ -90,7 +99,7 @@ Run `pod install` from the command line and open the `.xcworkspace` file generat
 
 ### Manual
 
-- To manually install AirServiceKit in your Xcode project, download the latest release of `AirServiceKit.framework`. 
+- To manually install AirServiceKit in your Xcode project, download the latest release of `AirServiceKit.framework`.
 - Go to your Xcode project’s “General” settings. Drag `AirServiceKit.framework` to the `Embedded Binaries` section.
 - If you experience problems with unknown headers go to your target's `Build Settings` and add the parent path to `AirServiceKit.framework` in the `Framework Search Paths` section.
 
