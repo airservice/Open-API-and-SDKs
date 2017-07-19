@@ -23,11 +23,15 @@ platform :ios do
 			path: "ASPayPalPayments.podspec",
 			version_number: deploy_version
 		)
+		version_bump_podspec(
+			path: "ASApplePayPayments.podspec",
+			version_number: deploy_version
+		)
 
 		pod_lib_lint allow_warnings: true
 		documentation
 		git_commit(
-			path: ['AirServiceKit.podspec', 'ASPayPalPayments.podspec', 'iOS/Docs'],
+			path: ['AirServiceKit.podspec', 'ASPayPalPayments.podspec', 'ASApplePayPayments.podspec', 'iOS/Docs'],
 			message: "Release AirServiceKit #{deploy_version}"
 		)
 		add_git_tag tag: "ios-sdk.#{deploy_version}"
