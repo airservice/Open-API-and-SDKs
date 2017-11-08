@@ -105,6 +105,13 @@ typedef NS_ENUM(NSInteger, ASHostActionType)
  */
 @property (nonatomic, strong) IBInspectable NSString* sector;
 
+/**
+ Your venue id as provided by AirService
+
+ Depending on your setup by AirService this value may not be required.
+ */
+@property (nonatomic, strong) IBInspectable NSString* venueID;
+
 
 /**
  Determines the return/exit button that will be shown when AirService is presented or pushed
