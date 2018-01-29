@@ -13,6 +13,6 @@ Pod::Spec.new do |s|
 	s.requires_arc = true
 	s.frameworks = 'PassKit'
 	s.source_files = 'iOS/ApplePay-Payments/*.{h,m}'
-	s.dependency 'Braintree/Apple-Pay', '~>4.8.1'
+	s.dependency 'Braintree/Apple-Pay', '~>4.10.0'
 
 end
