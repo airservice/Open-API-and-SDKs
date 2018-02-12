@@ -7,7 +7,7 @@
     <meta charset='utf-8'>
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jazzy.js" defer></script>
-    
+
   </head>
   <body>
     <a title="AirServiceKit  Reference"></a>
@@ -59,7 +59,7 @@
       <article class="main-content">
         <section>
           <section class="section">
-            
+
             <a href='#airservicekit' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='airservicekit'>AirServiceKit</h1>
 
 <p>AirServiceKit SDK allows you to include the AirService ordering platform right within your own iOS application.</p>
@@ -93,18 +93,18 @@
             - NSThirdPartyExceptionRequiresForwardSecrecy = NO
             - NSExceptionMinimumTLSVersion = TLSv1.0
 
-- Privacy - Location Usage Description =  
+- Privacy - Location Usage Description =
 - NSLocationAlwaysUsageDescription =
 - NSLocationWhenInUseUsageDescription =
 </code></pre>
 
 <p><a href="https://raw.githubusercontent.com/airservice/Open-API-and-SDKs/master/iOS/Examples/Screenshots/InfoPlist1.png"><img src="https://raw.githubusercontent.com/airservice/Open-API-and-SDKs/master/iOS/Examples/Screenshots/InfoPlist1.png" alt="Info.plist"></a></p>
 
-<p>To provide a seamless password reset flow AirService uses a URL scheme to automatically return a customer to the app. Please provide AirService with a URL scheme that will open your application straight into AirService Ordering, ie. <code>com.company.appname://airservice</code>.</p>
+<p>To provide a seamless password reset flow AirService uses a URL scheme to automatically return a customer to the app. Please provide AirService with a URL scheme that will open your application straight into AirService Ordering, ie. <code>appname.airservice://login</code>.</p>
 <pre class="highlight plaintext"><code>- URL types
     - Item 0
         - URL Schemes
-            - Item 0 com.company.appname://airservice
+            - Item 0 appname.airservice://login
 </code></pre>
 
 <p>For more information see the <a href="http://airservice.github.io/Open-API-and-SDKs/iOS/Docs/">documentation</a></p>
