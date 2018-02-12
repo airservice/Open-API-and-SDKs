@@ -38,20 +38,20 @@ The [Examples](https://github.com/airservice/Open-API-and-SDKs/tree/master/iOS/E
 			- NSThirdPartyExceptionRequiresForwardSecrecy = NO
 			- NSExceptionMinimumTLSVersion = TLSv1.0
 
-- Privacy - Location Usage Description =  
+- Privacy - Location Usage Description =
 - NSLocationAlwaysUsageDescription =
 - NSLocationWhenInUseUsageDescription =
 ```
 
 [![Info.plist](https://raw.githubusercontent.com/airservice/Open-API-and-SDKs/master/iOS/Examples/Screenshots/InfoPlist1.png)](https://raw.githubusercontent.com/airservice/Open-API-and-SDKs/master/iOS/Examples/Screenshots/InfoPlist1.png)
 
-To provide a seamless password reset flow AirService uses a URL scheme to automatically return a customer to the app. Please provide AirService with a URL scheme that will open your application straight into AirService Ordering, ie. `com.company.appname://airservice`.
+To provide a seamless password reset flow AirService uses a URL scheme to automatically return a customer to the app. Please provide AirService with a URL scheme that will open your application straight into AirService Ordering, ie. `appname.airservice://login`.
 
 ```
 - URL types
 	- Item 0
 		- URL Schemes
-			- Item 0 com.company.appname://airservice
+			- Item 0 appname.airservice://login
 ```
 
 For more information see the [documentation](http://airservice.github.io/Open-API-and-SDKs/iOS/Docs/)
