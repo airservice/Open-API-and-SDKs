@@ -45,6 +45,9 @@ typedef NS_ENUM(NSInteger, ASHostActionType)
 /** Private protocol used with ASPayPalPayments */
 @protocol ASPayPalPaymentsConnector;
 
+/** Private protocol used with ASApplePayPayments */
+@protocol ASApplePayPaymentsConnector;
+
 
 /**
  AirServiceKitViewController
@@ -169,6 +172,38 @@ typedef NS_ENUM(NSInteger, ASHostActionType)
  @see `acceptPayPalPayments` and https://github.com/airservice/Open-API-and-SDKs for more information.
  */
 @property (nonatomic, strong) id<ASPayPalPaymentsConnector> payPalPaymentsClient;
+
+
+/**
+ Set this flag to indicate your application will support Apple Pay payments
+ 
+ Supporting Apple Pay payments inside AirServiceKit also requires the [ASApplePayPayments library](https://github.com/airservice/Open-API-and-SDKs).
+ 
+ ```objc
+ self.viewController.acceptApplePayPayments = YES;
+ self.viewController.applePayPaymentsClient = [[ASApplePayPayments alloc] init];
+ ```
+ 
+ @note Defaults to NO
+ @see `payPalPaymentsClient` and https://github.com/airservice/Open-API-and-SDKs for more information.
+ */
+@property (nonatomic, assign) BOOL acceptApplePayPayments;
+
+
+/**
+ Your initialised ASApplePayPayments instance.
+ 
+ Supporting Apple Pay payments inside AirServiceKit also requires the [ASApplePayPayments library](https://github.com/airservice/Open-API-and-SDKs).
+ Provide an initialised instance of ASApplePayPayments as well as setting acceptApplePayPayments to true
+ 
+ ```objc
+ self.viewController.acceptApplePayPayments = YES;
+ self.viewController.applePayPaymentsClient = [[ASApplePayPayments alloc] init];
+ ```
+ 
+ @see `acceptApplePayPayments` and https://github.com/airservice/Open-API-and-SDKs for more information.
+ */
+@property (nonatomic, strong) id<ASApplePayPaymentsConnector> applePayPaymentsClient;
 
 
 /**
